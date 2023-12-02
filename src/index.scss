@@ -1,0 +1,36 @@
+$font-family_1: "Source Sans Pro", sans-serif;
+
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap";
+/* Track */
+/* Handle */
+/* Handle on hover */
+html {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family_1;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family_1;
+}
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family_1;
+}
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family_1;
+  display: flex;
+  position: relative;
+}
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family_1;
+}
+button {
+  margin: 2px !important;
+}

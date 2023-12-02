@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Contact from "./Pages/Contact";
+import { Provider } from "react-redux";
+import contactStore from "./redux/Store";
+import { ToastContainer } from "react-toastify";
+import Navbar from "./components/Navbar";
+import { ColorModeContext, useMode } from "./theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 
 function App() {
+  const [theme, colorMode] = useMode();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Provider store={contactStore}>
+          <div className="app">
+            <main className="content">
+              <Navbar/>
+              <Routes>
+                <Route path="/" element={<Contact />}></Route>
+              </Routes>
+            </main>
+          </div>
+          <ToastContainer position="top-right"></ToastContainer>
+        </Provider>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
 

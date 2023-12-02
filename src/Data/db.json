@@ -1,0 +1,22 @@
+{
+  "contact": [
+    {
+      "id": 1,
+      "name": "Kendy",
+      "phone": "0938725167",
+      "email": "kendy@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Luu Hung",
+      "phone": "0938498036",
+      "email": "hung.luu81000@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Jenny",
+      "phone": "0938725467",
+      "email": "jenny@gmail.com"
+    }
+  ]
+}
